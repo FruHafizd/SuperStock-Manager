@@ -3,9 +3,10 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+
 Route::get('/', function () {
-    return view('welcome');
-});
+    return redirect()->route('login');
+})->middleware('guest');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
