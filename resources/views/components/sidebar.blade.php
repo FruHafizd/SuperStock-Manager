@@ -127,7 +127,10 @@
     </button>
 
     {{-- Main Content Area --}}
-    <div class="h-screen overflow-y-auto">
-        {{ $slot }}
+    <div class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen w-full p-0 lg:p-0">
+        <div class="h-screen w-full overflow-y-auto">
+            {{ $slot }}
+        </div>
     </div>
+
 </div>
