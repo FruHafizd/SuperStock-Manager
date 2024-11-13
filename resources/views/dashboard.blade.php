@@ -5,24 +5,84 @@
         <div class="mb-8">
             <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between">
                 <div class="mb-6 lg:mb-0">
-                    <h1 class="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600">Welcome back, Admin</h1>
+                    <h1 class="text-3xl font-bold bg-clip-text ">
+                        Welcome back, Admin
+                    </h1>
                     <p class="mt-2 text-gray-600">Here's what's happening with your store today.</p>
                 </div>
-                <div class="mt-4 lg:mt-0 flex flex-col sm:flex-row gap-4">
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <!-- Search Bar -->
                     <div class="relative">
-                        <input type="text" class="w-full pl-10 pr-4 py-2.5 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200 bg-white text-sm" placeholder="Search products...">
+                        <input type="text" 
+                               class="w-full pl-10 pr-4 py-2.5 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200 bg-white text-sm" 
+                               placeholder="Search products...">
                         <span class="absolute left-3 top-2.5 text-gray-400">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                             </svg>
                         </span>
                     </div>
+                    <!-- Export Button -->
+                    <div class="relative inline-block text-left">
+                        <button type="button" 
+                                class="inline-flex items-center px-4 py-2.5 border border-gray-200 text-sm font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200 shadow-sm">
+                            <svg class="w-5 h-5 mr-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                            </svg>
+                            Export Data
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <!-- Export Dropdown Menu -->
+                        <div class="hidden origin-top-right absolute right-0 mt-2 w-48 rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100">
+                            <div class="py-1">
+                                <a href="#" class="group flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
+                                    <svg class="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                    </svg>
+                                    Export as PDF
+                                </a>
+                                <a href="#" class="group flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
+                                    <svg class="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>
+                                    </svg>
+                                    Export as Excel
+                                </a>
+                                <a href="#" class="group flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
+                                    <svg class="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2"/>
+                                    </svg>
+                                    Export as CSV
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add New Product Button -->
                     <button class="inline-flex items-center justify-center px-4 py-2.5 border border-transparent text-sm font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200 shadow-sm hover:shadow-md">
                         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
                         </svg>
                         Add New Product
                     </button>
+                </div>
+            </div>
+            <!-- Quick Date Filter -->
+            <div class="mt-6 flex flex-wrap gap-3">
+                <button class="px-4 py-2 rounded-lg bg-blue-600 text-white text-sm font-medium hover:bg-blue-700 transition-colors duration-200">
+                    Today
+                </button>
+                <button class="px-4 py-2 rounded-lg bg-white text-gray-600 text-sm font-medium hover:bg-gray-50 border border-gray-200 transition-colors duration-200">
+                    Yesterday
+                </button>
+                <button class="px-4 py-2 rounded-lg bg-white text-gray-600 text-sm font-medium hover:bg-gray-50 border border-gray-200 transition-colors duration-200">
+                    Last 7 days
+                </button>
+                <button class="px-4 py-2 rounded-lg bg-white text-gray-600 text-sm font-medium hover:bg-gray-50 border border-gray-200 transition-colors duration-200">
+                    Last 30 days
+                </button>
+                <div class="relative">
+                    <input type="date" class="px-4 py-2 rounded-lg bg-white text-gray-600 text-sm font-medium border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200">
                 </div>
             </div>
         </div>
