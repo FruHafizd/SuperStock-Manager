@@ -1,0 +1,45 @@
+form
+Categories Create/Edit Form
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="max-w-2xl mx-auto">
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+            {{-- Form Header --}}
+            <div class="px-6 py-4 border-b border-gray-200">
+                <h2 class="text-xl font-semibold text-gray-900">Tambah Kategori Baru</h2>
+            </div>
+
+            {{-- Form Content --}}
+            <form class="p-6">
+                <div class="space-y-6">
+                    {{-- Nama Kategori --}}
+                    <div>
+                        <label for="item_categories" class="block text-sm font-medium text-gray-700">Nama Kategori</label>
+                        <input type="text" name="item_categories" id="item_categories" 
+                            placeholder="Masukkan nama kategori"
+                            class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
+                    </div>
+
+                    {{-- Deskripsi --}}
+                    <div>
+                        <label for="description_categories" class="block text-sm font-medium text-gray-700">Deskripsi</label>
+                        <textarea name="description_categories" id="description_categories" rows="4"
+                            placeholder="Masukkan deskripsi kategori"
+                            class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500"></textarea>
+                    </div>
+                </div>
+
+                {{-- Form Actions --}}
+                <div class="mt-6 flex items-center justify-end gap-4">
+                    <button type="button"
+                        class="bg-white py-2 px-4 border border-gray-300 rounded-lg shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                        Batal
+                    </button>
+                    <button type="submit"
+                        class="bg-blue-600 py-2 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                        Simpan Kategori
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
