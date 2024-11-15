@@ -1,0 +1,34 @@
+Barang Database : Nama Barang, Kategori Barang (Relasi), Nominal barang, Harga barang |
+Barang itu bisa didapatkan di mana saja (Supplier) , jadi ini barang memiliki banyak supplier
+
+- Daftar Barang = Daftar Barang Jadi Nama" Product saja 
+- Barang Masuk = CRUD (Database )
+- Barang Keluar = ini cuman list saja
+- Stok Menipis = List Saja
+
+
+Supplier Database  : Nama Supplier, Alamat, Kontak, Histori Transaksi (Relasi),
+supplier memiliki banyak barang juga , tentunya barang itu tidak satu saja, 
+
+Jadi nanti di tampilan user itu, ketika ada barang masuk maka dipilih dapat dari mana Barang itu (Supplier nya)?
+
+KESIMPULANNYA ADALAH Barang Dan Relasi adalah = Barang bisa memiliki banyak supplier, Begitu Juga Dengan Supplier 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Table : 
+List Barang : Nama Barang, Kategori (Relasi), Nominal Barang (Logic : berapa banyak barang masuk di entitas suatu barang dan apa bila ada barang keluar maka di kurang) (Berapa barang yang ia punya Di Kumpulkan, relasi dengan Transaksi Ambil Quantity Seluruhnya), Harga Persatuan Barang
+
+Supplier Barang :  Nama Supplier, Alamat, Kontak,
+
+Transaksi : Id barang (Relasi Dengan Table Barang), transaksi tipe (Jadi Nantinya akan di kelompokan jadi 2 yaitu masuk atau keluar, kalau di tampilan clientnya adalah Kita Ambil query sql nya Yang Khusus Menampilkan Masuk dan kelaur), Quantity, tanggal transaksi, id supplier, unit_price, total_price, notes
+
+
+
+
+
+
+
+
+
+
+
+History Item : Barang Masuk tanggal berapa, Barang Berelasi
